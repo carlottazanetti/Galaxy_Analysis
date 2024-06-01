@@ -564,14 +564,19 @@ else:
 
 #moving data_SDSS_Info
 os.chdir(dir_data)
-if os.path.exists('data_SDSS_Info'+'.fit') is False:
-    cmd='mv '+dir_home+'/data_SDSS_Info'+'.fit .'
+# Specify the absolute path to the file
+file_path = r"C:\Users\carlo\Documents\tesine triennale\ProjectPython\Project\data_SDSS_Info.fit"
+if os.path.exists(file_path) is False:
+    print('yea')
+    file_name = 'data_SDSS_Info.fit'
+    cmd= f"move {file_name} {dir_home}"
     os.system(cmd)
 else:
     pass
+    
 
 ####opening the file
-hdul=pf.open('data_SDSS_Info.fit')
+hdul=pf.open(file_path)
 hdul.info()
 print(hdul[1].header)
 cols=hdul[1].columns
