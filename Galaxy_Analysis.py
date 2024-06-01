@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
 from scipy.stats.stats import pearsonr
 
+
 ###STEP 1
 ####extracting the parent sample 
 names=['z','petroMag_u', 'petroMag_g','petroMag_r', 'petroMag_i', 'petroMag_z', 'h_alpha_flux','h_beta_flux', 'oiii_5007_flux', 'nii_6584_flux','lgm_tot_p50','sfr_tot_p50','absMagU', 'absMagG', 'absMagR', 'absMagI', 'absMagZ']
